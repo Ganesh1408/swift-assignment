@@ -36,7 +36,7 @@ import { useEffect, useState } from 'react'
         {profiledata.length >0 &&<Header profiledata={profiledata[0]}/>}
       <Routes>
         <Route path="/profile" element={<ProfileScreen profiledata={profiledata[0]}/>}/>
-        <Route path="/comments" element={<CommentsDashboard/>}/>
+        <Route path="/" element={<CommentsDashboard/>}/>
       </Routes>
         
         
