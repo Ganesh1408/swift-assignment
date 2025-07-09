@@ -12,7 +12,7 @@ function ProfileScreen({ profiledata }) {
     .toUpperCase();
   return (
     <>
-      <Link to="/comments" className="welcomenote">
+      <Link to="/" className="welcomenote">
         <FaArrowLeftLong style={{ position: "relative", top: "3px" }} />
         <span>Welcome,{profiledata.name}</span>
       </Link>
