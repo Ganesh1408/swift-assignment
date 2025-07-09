@@ -1,4 +1,4 @@
-// import { useEffect, useState } from "react"
+ 
 import { FaArrowLeftLong } from "react-icons/fa6";
 import "./style.css";
 import { Link } from "react-router-dom";
@@ -30,27 +30,27 @@ function ProfileScreen({ profiledata }) {
           <div className="userDetails">
             <div>
             <label  htmlFor="userId">User ID</label>
-            <input className="input" id="userId" value={profiledata.id} />
+            <input className="input" id="userId" value={profiledata.id} readOnly />
           </div>
           <div>
             <label htmlFor="userName">Name</label>
-            <input className="input" id="userName" value={profiledata.name} />
+            <input className="input" id="userName" value={profiledata.name} readOnly />
           </div>
           <div>
             <label htmlFor="email">Email</label>
-            <input className="input" id="email" value={profiledata.email} />
+            <input className="input" id="email" value={profiledata.email} readOnly />
           </div>
           <div>
             <label htmlFor="address">Address</label>
             <input
               className="input"
               id="address"
-              value={profiledata.address.city}
+              value={profiledata.address.city} readOnly
             />
           </div>
           <div>
             <label htmlFor="phone">Phone</label>
-            <input className="input" id="phone" value={profiledata.phone} />
+            <input className="input" id="phone" value={profiledata.phone} readOnly />
           </div>
           </div>
         </div>

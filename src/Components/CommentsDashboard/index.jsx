@@ -74,17 +74,17 @@ function CommentsDashboard() {
       console.log(error);
     }
   };
-  //fetch data based on sort in localstorage
+  // fetch data based on sort in localstorage
   useEffect(() => {
     const storedPost = localStorage.getItem("sortedDataByPostId");
     const storedName = localStorage.getItem("sortedDataByName");
     const storedEmail = localStorage.getItem("sortedDataByEmail");
     try {
-      if (storedPost) {
+      if (storedPost && JSON.parse(storedPost)) {
         setData(JSON.parse(storedPost));
-      } else if (storedName) {
+      } else if (storedName &&  JSON.parse(storedName)) {
         setData(JSON.parse(storedName));
-      } else if (storedEmail) {
+      } else if (storedEmail &&  JSON.parse(storedEmail)) {
         setData(JSON.parse(storedEmail));
       } else {
         fetchCommentsData();
@@ -93,6 +93,8 @@ function CommentsDashboard() {
       console.log(`Error parsing localstorage data :`, error);
     }
   }, []);
+  
+
 
   //filter searchItem
   const searchFilter = data.filter((comment) => {
@@ -110,6 +112,7 @@ function CommentsDashboard() {
   const start = currentPage * itemsPerPage;
   const end = start + itemsPerPage;
   //return jsx
+  console.log(searchFilter)
   return (
     <div className="comment-container">
     <Header/>
@@ -149,6 +152,7 @@ function CommentsDashboard() {
         style={{ borderCollapse: "collapse", border: "1px solid lightgrey",margin:"auto",width:'90%'}}
       >
         <thead>
+        <tr>
           <th className="thstyle" style={{ borderTopLeftRadius: "8px" }}>
             PostId
           </th>
@@ -157,6 +161,7 @@ function CommentsDashboard() {
           <th className="thstyle" style={{ borderTopRightRadius: "8px" }}>
             Comment
           </th>
+          </tr>
         </thead>
         <tbody>
           {searchFilter.slice(start, end).map((comment) => (
