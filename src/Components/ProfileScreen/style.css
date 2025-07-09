@@ -1,0 +1,99 @@
+.welcomenote{
+    
+    display: flex;
+    gap:10px;
+    margin-left:320px;
+    text-decoration: none;
+    color:black;
+    font-size:18px;
+    
+    
+}
+.user{
+    height:500px;
+    width:900px;
+    margin: auto;
+    border:2px solid lightgrey;
+    border-radius: 6px;
+    margin-top:30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    
+}
+.profilename{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:40px;
+    margin-top:30px;
+    margin-bottom:20px;
+
+    /* margin-bottom:80px; */
+}
+.name-initial-container{
+    height:60px;
+    width:60px;
+    border-radius: 50%;
+    background-color: lightgrey;
+    position:relative;
+    left:30px;
+}
+.name-initial{
+    position:absolute;
+    left:18px;
+    top:22px;
+    font-size:18px;
+}
+
+
+
+.userDetails{
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* margin:auto; */
+
+    
+}
+.input{
+    height:40px;
+    width:400px;
+    border:none;
+    background-color: lightgrey;
+    border-radius: 6px;
+    display: block;
+    margin:10px;
+    padding-left: 30px;
+    margin-left:30px;
+}
+label{
+    padding-left:40px;
+}
+
+@media screen and (max-width: 768px) {
+  .user {
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .userDetails {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-field {
+    width: 100%;
+  }
+
+  .profilename {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .name-initial-container {
+    margin-bottom: 10px;
+  }
+}
