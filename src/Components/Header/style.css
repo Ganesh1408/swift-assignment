@@ -3,41 +3,44 @@
     /* overflow: hidden; */
     padding:0;
     box-sizing: border-box;
+    /* overflow: hidden; */
 }
 .header{
     position: sticky;
     top:0;
     height:50px;
-    width:100%;
+    width:100vw;
     background-color: grey;
     /* margin:0px; */
     display:flex;
     justify-content:space-between;
     align-items: center;
-padding-left:100px;
-    padding-right:150px;
-    margin-bottom:40px;
+padding-left:30px;
+    padding-right:50px;
+    margin-bottom:20px;
     z-index:1000;
     overflow: hidden;
 
     
 }
 .image{
-    color:white;
+    height:30px;
+    width:80px;
 }
 .initial-container{
     color:navy;
     background-color:white;
-    height:30px;
-    width:30px;
+    height:25px;
+    width:25px;
     border-radius: 50%;
     position:relative;
     
 }
 .initial{
     position:absolute;
-    top:6px;
+    top:8px;
     left:5px;
+    font-size:12px
     
 
 }
@@ -50,5 +53,39 @@ padding-left:100px;
 }
 .profile-name{
     color:white;
+    font-size: 14px;
+}
+
+@media screen and (min-width:768px){
+    .header{
+    
+padding-left:100px;
+    padding-right:150px;
+    margin-bottom:40px;
+    
+
+    
+}
+.image{
+    height:50px;
+    width:100px;
+}
+.initial-container{
+    
+    height:32px;
+    width:32px;
+    
+    
+}
+.initial{
+   top:6px;
+    font-size:18px
+    
+
+}
+
+.profile-name{
+    color:white;
     font-size: 16px;
+}
 }

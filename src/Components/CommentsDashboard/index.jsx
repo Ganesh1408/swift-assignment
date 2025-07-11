@@ -132,12 +132,8 @@ function CommentsDashboard() {
           </button>
         </div>
         <IoMdSearch
-          style={{
-            position: "relative",
-            left: "410px",
-            top: "18px",
-            color: "grey",
-          }}
+         className="searchIcon"
+          
         />
         <input
           value={input}
@@ -149,7 +145,8 @@ function CommentsDashboard() {
       </div>
 
       <table
-        style={{ borderCollapse: "collapse", border: "1px solid lightgrey",margin:"auto",width:'90%'}}
+        className="table"
+       
       >
         <thead>
         <tr>
@@ -169,10 +166,10 @@ function CommentsDashboard() {
               style={{ border: "1px solid lightgrey", textAlign: "center" }}
               key={comment.id}
             >
-              <td>{comment.postId}</td>
-              <td>{comment.name}</td>
-              <td>{comment.email}</td>
-              <td className="table-cell" > {comment.body}</td>
+              <td className="table-cell">{comment.postId}</td>
+              <td className="table-cell">{comment.name}</td>
+              <td className="table-cell">{comment.email}</td>
+              <td className="table-cell" title={comment.body}  > {comment.body}</td>
             </tr>
           ))}
         </tbody>
